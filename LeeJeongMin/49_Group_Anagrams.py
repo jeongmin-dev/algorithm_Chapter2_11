@@ -10,6 +10,7 @@ class Solution:
 
         #   리스트의 단어를 꺼내서 알파벳이 같은지 확인
         dic = {}
+        print(''.join(sorted('hello')))
         for i in range(len(strs)):
             #   단어를 재배열(in order) 하여 분리한 뒤에 합친다 (키값)
             r = ''.join(sorted(strs[i]))
@@ -20,9 +21,11 @@ class Solution:
             #   그 외의 경우 값으로 들어간다.
             else:
                 dic[r].append(strs[i])
-
+        print(dic)
         return dic.values()
 
 
 s = Solution()
 print(s.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+print(s.groupAnagrams([""]))
+print(s.groupAnagrams(["a"]))
